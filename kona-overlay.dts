@@ -301,4 +301,60 @@
 			qcom,panel-allow-phy-poweroff;
 		};
 	};
+
+	fragment@13 {
+		target-path = "/soc/jtagmm@7040000";
+		__overlay__ {
+			status = "disabled";
+		};
+	};
+
+	fragment@14 {
+		target-path = "/soc/jtagmm@7140000";
+		__overlay__ {
+			status = "disabled";
+		};
+	};
+
+	fragment@15 {
+		target-path = "/soc/jtagmm@7240000";
+		__overlay__ {
+			status = "disabled";
+		};
+	};
+
+	fragment@16 {
+		target-path = "/soc/jtagmm@7340000";
+		__overlay__ {
+			status = "disabled";
+		};
+	};
+
+	fragment@17 {
+		target-path = "/soc/jtagmm@7440000";
+		__overlay__ {
+			status = "disabled";
+		};
+	};
+
+	fragment@18 {
+		target-path = "/soc/jtagmm@7540000";
+		__overlay__ {
+			status = "disabled";
+		};
+	};
+
+	fragment@19 {
+		target-path = "/soc/jtagmm@7640000";
+		__overlay__ {
+			status = "disabled";
+		};
+	};
+
+	fragment@20 {
+		target-path = "/soc/jtagmm@7740000";
+		__overlay__ {
+			status = "disabled";
+		};
+	};
 };
