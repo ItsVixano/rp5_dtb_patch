@@ -294,4 +294,11 @@
 			dynamic-power-coefficient = <409>;
 		};
 	};
+
+	fragment@12 {
+		target-path = "/soc/qcom,mdss_dsi_phy0@ae94400";
+		__overlay__ {
+			qcom,panel-allow-phy-poweroff;
+		};
+	};
 };
