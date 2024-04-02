@@ -24,6 +24,8 @@ fdtput -d $kona_dtb /soc/qcom,kgsl-3d0@3d00000/qcom,gpu-pwrlevel-bins/qcom,gpu-p
 fdtput -d $kona_dtb /soc/qcom,wdt@17c10000 qcom,wakeup-enable
 # Remove display ramdump memory region
 fdtput -r $kona_dtb /reserved-memory/disp_rdump_region@9c000000
+# Disable PASR
+fdtput -r $kona_dtb /mem-offline
 ## END PATCHES
 
 # Repack boot
