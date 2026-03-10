@@ -1,0 +1,7 @@
+# boot
+boot.img
+_boot.img.extracted
+patched-boot.img
+
+# device-tree overlay
+*.dto
