@@ -2,9 +2,12 @@
 
 # Extract boot
 rm -rf _boot.img.extracted patched-boot.img
-(mkdir _boot.img.extracted; cd _boot.img.extracted; ../bin/magiskboot unpack ../boot.img)
+(mkdir _boot.img.extracted; cd _boot.img.extracted; ../bin/magiskboot unpack -h ../boot.img)
 
 ## START PATCHES
+# Cleanup boot.img cmdline header
+new_cmdline="androidboot.hardware=qcom androidboot.memcg=1 lpm_levels.sleep_disabled=1 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 loop.max_part=7 cgroup.memory=nokmem,nosocket reboot=panic_warm buildvariant=user"
+sed -i "s|^cmdline=.*|cmdline=${new_cmdline}|" _boot.img.extracted/header
 # Apply device-tree overlay
 kona_dtb="_boot.img.extracted/dtb"
 dtc -q -@ -I dts -O dtb -o kona-overlay.dto kona-overlay.dts
