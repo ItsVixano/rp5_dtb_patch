@@ -7,7 +7,7 @@
 	fragment@0 {
 		target-path = "/chosen";
 		__overlay__ {
-			bootargs = "quiet console=null loglevel=0 msm_rtb.filter=0 rcupdate.rcu_expedited=1 rcu_nocbs=0-7 kpti=0 mitigations=off nmi_watchdog=0 nowatchdog noirqdebug nodebugmon printk.devkmsg=off";
+			bootargs = "quiet console=null loglevel=0 msm_rtb.filter=0 rcupdate.rcu_expedited=1 rcu_nocbs=0-7 kpti=0 mitigations=off nmi_watchdog=0 nowatchdog noirqdebug nodebugmon printk.devkmsg=off mem_offline.nopasr=1";
 		};
 	};
 
